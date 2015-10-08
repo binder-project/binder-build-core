@@ -1,0 +1,34 @@
+{
+  "name": "binder-build-core",
+  "version": "0.0.0",
+  "description": "Core logic for converting a directory containing dependency files into a Binder-compatible Docker image",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binder-project/binder-build-core.git"
+  },
+  "keywords": [
+    "binder",
+    "docker",
+    "reproducibility",
+    "data",
+    "code"
+  ],
+  "author": "Andrew Osheroff <andrewosh@gmail.com> (http://andrewosh.com/)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/binder-project/binder-build-core/issues"
+  },
+  "dependencies": {
+    "lodash": "~3.10.1",
+    "js-yaml": "~3.4.2",
+    "dockerode": "~2.2.3",
+    "jsdoc": "~3.3.3",
+    "jsonschema": "~1.0.2",
+    "tar-fs": "~1.8.1",
+    "tmp": "0.0.28"
+  }
+}
