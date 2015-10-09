@@ -1,6 +1,6 @@
 var config = {}
 
 config.baseImage = "andrewosh/binder-base"
-config.repoName = "repo"
+config.repoString = "repo"
 
 module.exports = config
