@@ -1,4 +1,4 @@
-var schema = require('../util/schema.js')
+var schema = require('../../../util/schema.js')
 
 /**
  * The JSONSchema object for a binder.yml file

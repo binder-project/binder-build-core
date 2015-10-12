@@ -1,7 +1,7 @@
 var _ = require('lodash')
 
-var schema = require('../util/schema.js')
-var config = require('../config/main.js')
+var schema = require('../../../util/schema.js')
+var config = require('../../../config/main.js')
 
 /**
  * The schema of a Binder-compatible Dockerfile
