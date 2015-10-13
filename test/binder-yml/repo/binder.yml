@@ -1,0 +1,21 @@
+# potentially multiple, but for the short term supporting only one
+language:
+  - python: '2.7'
+
+# environment variables
+env:
+  - VAR1: val1
+  - VAR2: val2
+
+# apt-get list, will be whitelisted against travis
+apt:
+  - gcc-4.8
+  - zeromq234-dev
+
+# to be run after the rest
+install:
+  - conda install some-package
+  - pip install -r requirements.txt
+
+# the front-end we are targeting; would want to support many e.g. kernel, poster/dashboard
+application: notebook
