@@ -11,7 +11,13 @@ var fileCreation = function () {
       assert.fail()
     }
   }
-  builder.build('./test/requirements/repo/', callback)
+  var res = builder.build('./test/requirements/repo/', callback)
+  var status = res[0]
+  status.onAny(function (msg) {
+    console.log(msg)
+  })
+  var execute = res[1]
+  execute()
 }
 
 module.exports = [
