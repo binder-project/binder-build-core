@@ -10,6 +10,11 @@
     "type": "git",
     "url": "https://github.com/binder-project/binder-build-core.git"
   },
+  "directories": [
+    "config",
+    "dependencies",
+    "util"
+  ],
   "keywords": [
     "binder",
     "docker",
@@ -33,7 +38,6 @@
     "string-format": "~0.5.0",
     "fs-extra": "~0.24.0",
     "eventemitter2": "~0.4.14",
-    "async": "~1.4.2",
-    "app-root-path": "~1.0.0"
+    "async": "~1.4.2"
   }
 }

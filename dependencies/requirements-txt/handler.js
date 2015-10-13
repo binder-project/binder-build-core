@@ -1,8 +1,8 @@
 var path = require('path')
 
 var DepHandler = require('../../lib/dep-handler.js'),
-    root = require('app-root-path'),
     format = require('string-format')
+    path = require('path')
 format.extend(String.prototype)
 
 /**
@@ -10,7 +10,7 @@ format.extend(String.prototype)
  */
 function RequirementsTxt() {}
 RequirementsTxt.prototype = new DepHandler()
-RequirementsTxt.prototype.context = root.resolve('/dependencies/requirements-txt/context').toString()
+RequirementsTxt.prototype.context = path.join(__dirname, 'context')
 RequirementsTxt.prototype._generateString = function (name, contents) {
   str = '' +
   'ADD {0} requirements.txt\n'.format(name) +
