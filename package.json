@@ -28,16 +28,17 @@
     "url": "https://github.com/binder-project/binder-build-core/issues"
   },
   "dependencies": {
-    "lodash": "~3.10.1",
-    "js-yaml": "~3.4.2",
+    "async": "~1.4.2",
     "dockerode": "~2.2.3",
+    "eventemitter2": "~0.4.14",
+    "fs-extra": "~0.24.0",
+    "js-yaml": "~3.4.2",
     "jsdoc": "~3.3.3",
     "jsonschema": "~1.0.2",
-    "tar-fs": "~1.8.1",
-    "tmp": "0.0.28",
+    "lodash": "~3.10.1",
+    "request": "^2.65.0",
     "string-format": "~0.5.0",
-    "fs-extra": "~0.24.0",
-    "eventemitter2": "~0.4.14",
-    "async": "~1.4.2"
+    "tar-fs": "~1.8.1",
+    "tmp": "0.0.28"
   }
 }

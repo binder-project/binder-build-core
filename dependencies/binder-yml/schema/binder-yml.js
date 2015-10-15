@@ -5,7 +5,7 @@ var schema = require('../../../util/schema.js')
  * @constructor
  */
 var BinderYml = function () {}
-BinderYml.prototype = new schema.JSONSchema()
+BinderYml.prototype = new schema.YAMLSchema()
 BinderYml.prototype.schema = {
   type: "object",
   properties: {

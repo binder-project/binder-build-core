@@ -4,7 +4,7 @@ var Builder = require('../../lib/builder.js')
 
 // Begin tests
 
-var fileCreation = function () {
+var build = function () {
   var builder = new Builder({imageName: "binder-project-example-requirements"})
   var callback = function (err) {
     if (err) {
@@ -21,6 +21,6 @@ var fileCreation = function () {
 }
 
 module.exports = [
-  fileCreation
+  build
 ]
 
