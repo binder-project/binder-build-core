@@ -10,11 +10,11 @@ env:
 # apt-get list, will be whitelisted against travis
 apt:
   - gcc-4.8
-  - zeromq234-dev
+  - libzmq3-dev
 
 # to be run after the rest
 install:
-  - conda install some-package
+  - conda install beautiful-soup
   - pip install -r requirements.txt
 
 # the front-end we are targeting; would want to support many e.g. kernel, poster/dashboard
