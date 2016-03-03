@@ -11,6 +11,7 @@ format.extend(String.prototype)
 function RequirementsTxt() {}
 RequirementsTxt.prototype = new DepHandler()
 RequirementsTxt.prototype.context = path.join(__dirname, 'context')
+RequirementsTxt.prototype.precedence = 1
 RequirementsTxt.prototype._generateString = function (name, contents) {
   str = '' +
   'ADD {0} requirements.txt\n'.format(name) +

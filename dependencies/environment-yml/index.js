@@ -7,6 +7,7 @@ format.extend(String.prototype)
  */
 function EnvironmentYml() {}
 EnvironmentYml.prototype = new DepHandler()
+EnvironmentYml.prototype.precedence = 2
 EnvironmentYml.prototype._generateString = function (name, contents) {
   str = '' +
   'ADD {0} environment.yml\n'.format(name) +

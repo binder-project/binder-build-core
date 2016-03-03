@@ -8,6 +8,7 @@ var DepHandler = require('../../lib/dep-handler.js'),
 function Dockerfile() {}
 Dockerfile.prototype = new DepHandler()
 Dockerfile.prototype.schema = DockerfileSchema
+Dockerfile.prototype.precedence = 3
 Dockerfile.prototype._generateString = function (name, contents) {
   var lines = contents.split("\n")
   var fromLine = _.findIndex(lines, function (line) {

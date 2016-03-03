@@ -11,6 +11,7 @@ var BinderYmlSchema = require('./schema/binder-yml.js')
 function BinderYml() {}
 BinderYml.prototype = new DepHandler()
 BinderYml.prototype.schema = BinderYmlSchema
+BinderYml.prototype.precedence = 0
 BinderYml.prototype._generateString = function (name, contents) {
   // the current handling does not take the front-end OR language
   // into account

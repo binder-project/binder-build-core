@@ -7,6 +7,6 @@ module.exports = {
     "registry": "gcr.io/binder-testing",
     "host": "localhost"
   },
-  baseImage: "andrewosh/binder-base",
+  baseImage: "andrewosh/binder-base-headless:latest",
   repoString: "repo"
 }
