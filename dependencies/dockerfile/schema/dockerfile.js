@@ -14,7 +14,7 @@ Dockerfile.prototype.validate = function (obj) {
   }
   var lines = obj.split("\n")
   for (line in lines) {
-    if (_.startswith(line.strip, "FROM")) {
+    if (_.startsWith(line.strip, "FROM")) {
       var words = line.split(" ")
       if (words[1] !== config.baseImage) {
         return {errors: "Invalid base image"}

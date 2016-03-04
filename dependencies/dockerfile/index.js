@@ -5,12 +5,14 @@ var DepHandler = require('../../lib/dep-handler.js'),
 /**
  * @constructor
  */
-function Dockerfile() {}
+function Dockerfile() {
+  if (!(this instanceof Dockerfile)) return new Dockerfile()
+}
 Dockerfile.prototype = new DepHandler()
-Dockerfile.prototype.schema = DockerfileSchema
 Dockerfile.prototype.precedence = 3
+Dockerfile.prototype.schema = DockerfileSchema
 Dockerfile.prototype._generateString = function (name, contents) {
-  var lines = contents.split("\n")
+  var lines = contents.split('\n')
   var fromLine = _.findIndex(lines, function (line) {
     return _.startsWith(line.strip, "FROM")
   })

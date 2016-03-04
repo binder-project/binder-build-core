@@ -8,10 +8,12 @@ format.extend(String.prototype)
 /**
  * @constructor
  */
-function RequirementsTxt() {}
+function RequirementsTxt() {
+  if (!(this instanceof RequirementsTxt)) return new RequirementsTxt()
+}
 RequirementsTxt.prototype = new DepHandler()
-RequirementsTxt.prototype.context = path.join(__dirname, 'context')
 RequirementsTxt.prototype.precedence = 1
+RequirementsTxt.prototype.context = path.join(__dirname, 'context')
 RequirementsTxt.prototype._generateString = function (name, contents) {
   str = '' +
   'ADD {0} requirements.txt\n'.format(name) +

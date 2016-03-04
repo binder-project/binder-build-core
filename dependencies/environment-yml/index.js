@@ -5,7 +5,9 @@ format.extend(String.prototype)
 /**
  * @constructor
  */
-function EnvironmentYml() {}
+function EnvironmentYml() {
+  if (!(this instanceof EnvironmentYml)) return new EnvironmentYml()
+}
 EnvironmentYml.prototype = new DepHandler()
 EnvironmentYml.prototype.precedence = 2
 EnvironmentYml.prototype._generateString = function (name, contents) {
