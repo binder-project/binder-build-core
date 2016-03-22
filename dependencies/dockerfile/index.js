@@ -13,11 +13,12 @@ Dockerfile.prototype.precedence = 3
 Dockerfile.prototype.schema = DockerfileSchema
 Dockerfile.prototype._generateString = function (name, contents) {
   var lines = contents.split('\n')
-  var fromLine = _.findIndex(lines, function (line) {
-    return _.startsWith(line.strip, "FROM")
-  })
+  var isFromLine = function (line) {
+    return _.startsWith(_.trim(line), "FROM")
+  }
   // remove the FROM line from the Dockerfile (this will be added later)
-  return _.pullAt(lines, fromLine).join('\n')
+  _.remove(lines, isFromLine)
+  return lines.join('\n')
 }
 
 module.exports = Dockerfile
