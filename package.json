@@ -1,6 +1,6 @@
 {
   "name": "binder-build-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logic for converting a directory containing dependency files into a Binder-compatible Docker image",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "async": "~1.4.2",
+    "binder-logging": "^1.0.0",
     "dockerode": "~2.2.3",
     "eventemitter2": "~0.4.14",
     "fs-extra": "~0.24.0",
