@@ -1,5 +1,5 @@
-module.exports = {
-  docker: {
+{
+  "docker": {
     "enabled": true,
     "user": "N/A",
     "password": "N/A",
@@ -7,6 +7,6 @@ module.exports = {
     "registry": "gcr.io/binder-testing",
     "host": "localhost"
   },
-  baseImage: "andrewosh/binder-base:latest",
-  repoString: "repo"
+  "baseImage": "andrewosh/binder-base:latest",
+  "repoString": "repo"
 }

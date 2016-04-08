@@ -4,7 +4,8 @@
   "description": "Logic for converting a directory containing dependency files into a Binder-compatible Docker image",
   "main": "index.js",
   "scripts": {
-    "test": "node test/all.js"
+    "test": "node test/all.js",
+    "postinstall": "node scripts/postinstall.js"
   },
   "repository": {
     "type": "git",
