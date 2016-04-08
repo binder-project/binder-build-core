@@ -1,6 +1,6 @@
 # potentially multiple, but for the short term supporting only one
-language:
-  - python: '2.7'
+language: "python"
+version: 3.5
 
 # environment variables
 env:
@@ -13,9 +13,8 @@ apt:
   - libzmq3-dev
 
 # to be run after the rest
-install:
-  - conda install beautiful-soup
-  - pip install -r requirements.txt
+pip:
+  - numpy
 
-# the front-end we are targeting; would want to support many e.g. kernel, poster/dashboard
-application: notebook
+conda:
+  - scipy

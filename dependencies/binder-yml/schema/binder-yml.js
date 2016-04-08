@@ -20,6 +20,10 @@ BinderYml.prototype.schema = {
       }
     },
 
+    "version": {
+      type: "number",
+    },
+
     "env": {
       type: "array",
       items: {
@@ -39,18 +43,11 @@ BinderYml.prototype.schema = {
       }
     },
 
-    "install": {
-      type: "array",
-      items: {
-        type: "string"
-      }
-    },
-
     "application": {
       type: "string"
     }
   },
-  required: ["language", "application"]
+  required: ["language", "version", "application"]
 }
 
 module.exports = new BinderYml()
