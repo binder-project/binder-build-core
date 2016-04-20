@@ -7,10 +7,9 @@ then apply a prioritization scheme to determine which configuration files in the
 add contents to the Docker image.
 
 `binder-build-core` will search for the following files, in descending order
- 1. `.binder.yml`
- 2. `requirements.txt`
- 3. `environment.yml`
- 4. `Dockerfile`
+ 1. `requirements.txt`
+ 2. `environment.yml`
+ 3. `Dockerfile`
 and the first one it finds will be passed into a *dependency handler* for conversion into Dockerfile
 commands. The list of available dependency handlers and configuration file types can be
 found in the [dependencies](dependencies/) directory
