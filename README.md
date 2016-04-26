@@ -3,14 +3,14 @@ Core logic for converting a directory containing dependencies into a Binder-comp
 
 In Binder, the [`binder-build`](https://github.com/binder-project/binder-build) module is
 responsible for fetching repository contents and handing them off to `binder-build-core`, which will
-then apply a prioritization scheme to determine which configuration files in the directory should
-add contents to the Docker image.
+then use one of a set of supported configuration configuration files in the directory to construct a [Docker](https://www.docker.com/) image (an executable environment). 
 
-`binder-build-core` will search for the following files, in descending order
+`binder-build-core` will search for the following files, in descending order of priority (only one will be used during the build process): 
  1. `requirements.txt`
  2. `environment.yml`
  3. `Dockerfile`
-and the first one it finds will be passed into a *dependency handler* for conversion into Dockerfile
+
+The first one it finds will be passed into a *dependency handler* for conversion into Dockerfile
 commands. The list of available dependency handlers and configuration file types can be
 found in the [dependencies](dependencies/) directory
 
