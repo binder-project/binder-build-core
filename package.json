@@ -1,6 +1,6 @@
 {
   "name": "binder-build-core",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Logic for converting a directory containing dependency files into a Binder-compatible Docker image",
   "main": "index.js",
   "scripts": {
