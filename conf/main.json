@@ -1,7 +1,6 @@
 {
   "docker": {
     "enabled": true,
-    "email": "N/A",
     "registry": "gcr.io/binder-testing",
     "host": "localhost"
   },
