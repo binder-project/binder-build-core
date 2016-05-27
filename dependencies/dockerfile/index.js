@@ -9,7 +9,7 @@ function Dockerfile() {
   if (!(this instanceof Dockerfile)) return new Dockerfile()
 }
 Dockerfile.prototype = new DepHandler()
-Dockerfile.prototype.precedence = 3
+Dockerfile.prototype.precedence = 0
 Dockerfile.prototype.schema = DockerfileSchema
 Dockerfile.prototype._generateString = function (name, contents) {
   var lines = contents.split('\n')
