@@ -38,7 +38,7 @@ Dockerfile.prototype._getBaseImage = function (name, contents) {
   var baseImage = config.baseImage
   lines.forEach(function (line) {
     if (isFromLine(line)) {
-      var newBase = line.split(/ +/)[1]
+      var newBase = line.split(/ +/)[1].split(':')[0]
       if (acceptableImages.indexOf(newBase) !== -1) baseImage = newBase
     }
   })
