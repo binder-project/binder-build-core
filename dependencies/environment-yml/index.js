@@ -14,7 +14,8 @@ EnvironmentYml.prototype._generateString = function (name, contents) {
   str = '' +
   'ADD {0} environment.yml\n'.format(name) +
   'RUN conda env create -n binder\n' +
-  'RUN echo \"export PATH=/home/main/anaconda/envs/binder/bin/:$PATH\" >> ~/.binder_start\n' +
+  'RUN echo \"export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH\" >> ~/.binder_start\n' +
+  'RUN echo \"export PATH=/home/main/anaconda3/envs/binder/bin/:$PATH\" >> ~/.binder_start\n' +
   'RUN conda install -n binder jupyter\n' +
   'RUN /bin/bash -c \"source activate binder && jupyter kernelspec install-self --user\"\n'
   return str
