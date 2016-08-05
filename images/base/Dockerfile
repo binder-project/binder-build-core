@@ -48,5 +48,6 @@ RUN conda create -n python3 python=3.5 anaconda
 RUN /bin/bash -c "source activate python3 && ipython kernel install --user"
 
 RUN /home/main/anaconda2/bin/pip install --upgrade pip
+RUN ln -s /home/main/anaconda2 /home/main/anaconda
 
 ENV SHELL /bin/bash
