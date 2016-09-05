@@ -44,8 +44,8 @@ ADD .curlrc $HOME
 USER main
 
 # Install Anaconda and Jupyter
-RUN wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda2-4.0.0-Linux-x86_64.sh
-RUN bash Anaconda2-4.0.0-Linux-x86_64.sh -b &&\
+RUN wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda2-4.0.0-Linux-x86_64.sh &&\
+    bash Anaconda2-4.0.0-Linux-x86_64.sh -b &&\
     rm Anaconda2-4.0.0-Linux-x86_64.sh
 ENV PATH $HOME/anaconda2/bin:$PATH
 RUN conda create -n python3 python=3.5 anaconda

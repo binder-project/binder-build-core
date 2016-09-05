@@ -36,8 +36,8 @@ ADD start-notebook.sh /home/main/
 USER main
 
 # Install Anaconda and Jupyter
-RUN wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
-RUN bash Miniconda-latest-Linux-x86_64.sh -b &&\
+RUN wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh &&\
+    bash Miniconda-latest-Linux-x86_64.sh -b &&\
     rm Miniconda-latest-Linux-x86_64.sh
 ENV PATH $HOME/miniconda2/bin:$PATH
 
