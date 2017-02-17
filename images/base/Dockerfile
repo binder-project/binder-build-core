@@ -9,8 +9,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y &&\
     apt-get install --fix-missing -y curl git vim wget build-essential python-dev bzip2 libsm6\
-      locales nodejs-legacy npm python-virtualenv python-pip gcc gfortran libglib2.0-0 python-qt4 &&\
+      locales nodejs-legacy npm python-virtualenv python-pip gcc gfortran libglib2.0-0 python-qt4 libstdc++6 libtinfo-dev &&\
     apt-get clean &&\
+    apt-get dist-upgrade -y &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*tmp
 
 # set utf8 locale:
