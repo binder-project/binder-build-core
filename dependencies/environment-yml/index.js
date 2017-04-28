@@ -16,9 +16,7 @@ EnvironmentYml.prototype._generateString = function (name, contents) {
   'RUN conda env create -n binder\n' +
   'RUN echo \"export PATH=/home/main/anaconda2/envs/binder/bin/:/home/main/anaconda3/envs/binder/bin/:$PATH\" >> ~/.binder_start\n' +
   'RUN conda install -n binder jupyter\n' +
-  'RUN /bin/bash -c \"source activate binder && python -m ipykernel install --user\"\n' + 
-  'RUN jupyter notebook --generate-config\n' + 
-  'RUN echo \"c.NotebookApp.token = \'\'\" >> /home/main/.jupyter/jupyter_notebook_config.py\n'
+  'RUN /bin/bash -c \"source activate binder && python -m ipykernel install --user\"\n'
   return str
 }
 
